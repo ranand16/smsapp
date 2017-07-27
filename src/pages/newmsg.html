@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row-fluid">
+    <h2>New Messages</h2>
+  </div>
+  <div class="">
+    <form ng-submit="sendMessage()">
+      <input class="form-control" type="text" ng-model="to" placeholder="to">
+      <input class="form-control" type="text" ng-model="content" placeholder="content">
+      <center><button class="btn btn-default" type="submit" name="button" ng-disabled="!(too && content)">Save Contact</button></center>
+    </form>
+    <div align="center" class="alert alert-success" role="alert" ng-if="sent">{{ sent }}</div>
+    <div align="center" class="alert alert-error" role="alert" ng-if="notSent">{{ notSent }}</div>
+  </div>
+</div>

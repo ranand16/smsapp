@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row-fluid">
+    <h2>Sent Messages List</h2>
+  </div>
+  <div class="">
+    <table class="table table-striped" ng-init="getListMessages()">
+      <tr>
+        <th>From</th>
+        <th>Content</th>
+        <th>At</th>
+      </tr>
+      <tr ng-repeat="msg in msgs">
+        <td>
+          <span>{{msg.to}}</span>
+        </td>
+        <td>
+          <span>{{msg.content}}</span>
+        </td>
+        <td>
+          <span>{{msg.createdAt}}</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row-fluid">
+    <h2>New Contact</h2>
+  </div>
+  <div class="">
+    <form ng-submit="createContact()">
+      <input class="form-control" type="text" ng-model="name" placeholder="Full Name">
+      <input class="form-control" type="text" ng-model="phone" placeholder="phone">
+      <input class="form-control" type="text" ng-model="email" placeholder="email">
+      <input class="form-control" type="text" ng-model="address" placeholder="address">
+      <center><button class="btn btn-default" type="submit" name="button" ng-disabled="!(name && phone)">Save Contact</button></center>
+    </form>
+    <div align="center" class="alert alert-success" role="alert" ng-if="saved">{{ saved }}</div>
+    <div align="center" class="alert alert-error" role="alert" ng-if="notSaved">{{ notSaved }}</div>
+  </div>
+</div>

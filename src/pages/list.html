@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row-fluid">
+    <h2>Contacts</h2>
+  </div>
+  <div class="">
+    <table class="table table-striped" ng-init="getContacts()">
+      <tr>
+        <td>
+          <span>
+            <a href="/create">Create New Contact</a>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Address</th>
+      </tr>
+      <tr ng-repeat="item in list">
+        <td>
+          <span ng-click="getContactInfo()" name="name" ng-model="name"><a>{{item.name}}</a></span>
+        </td>
+        <td>
+          <span>{{item.phone}}</span>
+        </td>
+        <td>
+          <span>{{item.email}}</span>
+        </td>
+        <td>
+          <span>{{item.address}}</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
